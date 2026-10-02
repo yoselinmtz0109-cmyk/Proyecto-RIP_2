@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Protocolo RIP | Proyecto de Investigación</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ENCABEZADO
+    ====================================================== -->
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <span class="logo-simbolo">◈</span>
+            <span>RIP</span>
+        </div>
+
+        <nav class="menu">
+
+            <button class="menu-item activo" onclick="abrirVentana('inicio', this)">
+                INICIO
+            </button>
+
+            <button class="menu-item" onclick="abrirVentana('concepto', this)">
+                ¿QUÉ ES RIP?
+            </button>
+
+            <button class="menu-item" onclick="abrirVentana('versiones', this)">
+                VERSIONES
+            </button>
+
+            <button class="menu-item" onclick="abrirVentana('funcionamiento', this)">
+                FUNCIONAMIENTO
+            </button>
+
+            <button class="menu-item" onclick="abrirVentana('topologia', this)">
+                TOPOLOGÍA
+            </button>
+
+            <button class="menu-item" onclick="abrirVentana('configuracion', this)">
+                CONFIGURACIÓN
+            </button>
+
+            <button class="menu-item" onclick="abrirVentana('bucles', this)">
+                BUCLES
+            </button>
+
+            <button class="menu-item" onclick="abrirVentana('analisis', this)">
+                ANÁLISIS
+            </button>
+
+            <button class="menu-item" onclick="abrirVentana('practica', this)">
+                PRÁCTICA
+            </button>
+
+            <button class="menu-item" onclick="abrirVentana('evaluacion', this)">
+                EVALUACIÓN
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTENEDOR DE VENTANAS
+    ====================================================== -->
+
+    <main class="contenedor-ventanas">
+
+
+        <!-- =================================================
+             VENTANA INICIO
+        ================================================== -->
+
+        <section id="inicio" class="ventana activa">
+
+            <div class="hero">
+
+                <div class="hero-contenido">
+
+                    <div class="etiqueta">
+                        PROYECTO DE INVESTIGACIÓN
+                    </div>
+
+                    <h1>
+                        PROTOCOLO
+                        <span>RIP</span>
+                    </h1>
+
+                    <p class="hero-subtitulo">
+                        Routing Information Protocol
+                    </p>
+
+                    <p class="hero-texto">
+                        Investigación y práctica sobre el funcionamiento
+                        del protocolo de enrutamiento dinámico RIP,
+                        utilizando RIPv2 en una topología de red
+                        implementada en Cisco Packet Tracer.
+                    </p>
+
+                    <div class="hero-botones">
+
+                        <button
+                            class="boton boton-principal"
+                            onclick="abrirVentana('concepto', document.querySelectorAll('.menu-item')[1])">
+                            EXPLORAR PROYECTO
+                        </button>
+
+                        <button
+                            class="boton boton-secundario"
+                            onclick="abrirVentana('topologia', document.querySelectorAll('.menu-item')[4])">
+                            VER TOPOLOGÍA
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-decoracion">
+
+                    <div class="nodo nodo-1"></div>
+                    <div class="nodo nodo-2"></div>
+                    <div class="nodo nodo-3"></div>
+                    <div class="nodo nodo-4"></div>
+
+                    <div class="linea linea-1"></div>
+                    <div class="linea linea-2"></div>
+                    <div class="linea linea-3"></div>
+
+                    <div class="router-central">
+                        RIP
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VENTANA CONCEPTO
+        ================================================== -->
+
+        <section id="concepto" class="ventana">
+
+            <div class="ventana-contenido">
+
+                <div class="encabezado-seccion">
+
+                    <span class="numero-seccion">01</span>
+
+                    <div>
+                        <span class="mini-titulo">
+                            FUNDAMENTOS
+                        </span>
+
+                        <h2>
+                            ¿Qué es RIP?
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="grid-dos">
+
+                    <article class="tarjeta tarjeta-grande">
+
+                        <div class="icono">
+                            ◉
+                        </div>
+
+                        <h3>
+                            Routing Information Protocol
+                        </h3>
+
+                        <p>
+                            RIP es un protocolo de enrutamiento dinámico
+                            utilizado para el intercambio de información
+                            de rutas entre routers.
+                        </p>
+
+                        <p>
+                            Se clasifica como un protocolo de gateway
+                            interior (IGP) y utiliza el método de
+                            <strong>vector de distancia</strong>.
+                        </p>
+
+                        <p>
+                            Su métrica principal es el número de saltos
+                            necesarios para alcanzar una red determinada.
+                        </p>
+
+                    </article>
+
+
+                    <article class="tarjeta">
+
+                        <h3>
+                            Características principales
+                        </h3>
+
+                        <ul class="lista">
+
+                            <li>
+                                <span>01</span>
+                                Protocolo de enrutamiento dinámico.
+                            </li>
+
+                            <li>
+                                <span>02</span>
+                                Utiliza vector de distancia.
+                            </li>
+
+                            <li>
+                                <span>03</span>
+                                Utiliza el número de saltos como métrica.
+                            </li>
+
+                            <li>
+                                <span>04</span>
+                                La distancia administrativa de RIP es 120.
+                            </li>
+
+                            <li>
+                                <span>05</span>
+                                RIPv2 permite trabajar con direccionamiento
+                                sin clase.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+                </div>
+
+
+                <div class="subseccion">
+                    <h3>Historia y evolución</h3>
+                    <div class="linea-tiempo">
+                        <div class="hito">
+                            <span class="hito-fecha">AÑOS 50–60</span>
+                            <h4>Base teórica</h4>
+                            <p>El algoritmo de Bellman-Ford, base del enrutamiento por vector de distancia, se desarrolla en esta época.</p>
+                        </div>
+                        <div class="hito">
+                            <span class="hito-fecha">FINALES DE LOS 70</span>
+                            <h4>Origen en Xerox</h4>
+                            <p>Xerox crea un protocolo de información de rutas para su arquitectura XNS, antecedente directo de RIP.</p>
+                        </div>
+                        <div class="hito">
+                            <span class="hito-fecha">1982</span>
+                            <h4>routed en BSD UNIX</h4>
+                            <p>El demonio <strong>routed</strong> de BSD lleva RIP a las redes IP y lo difunde en universidades y empresas.</p>
+                        </div>
+                        <div class="hito">
+                            <span class="hito-fecha">1988</span>
+                            <h4>RFC 1058 · RIPv1</h4>
+                            <p>Se documenta formalmente RIP versión 1: sin máscara de subred, con actualizaciones por broadcast.</p>
+                        </div>
+                        <div class="hito">
+                            <span class="hito-fecha">1993–1994</span>
+                            <h4>RIPv2</h4>
+                            <p>RFC 1388 y luego RFC 1723 agregan máscara de subred, multicast (224.0.0.9), autenticación y soporte VLSM/CIDR.</p>
+                        </div>
+                        <div class="hito">
+                            <span class="hito-fecha">1997–1998</span>
+                            <h4>RIPng y estándar</h4>
+                            <p>RFC 2080 define RIPng para IPv6 y RFC 2453 deja a RIPv2 como estándar.</p>
+                        </div>
+                        <div class="hito">
+                            <span class="hito-fecha">DÉCADA DE 1990 EN ADELANTE</span>
+                            <h4>Relevo por otros protocolos</h4>
+                            <p>OSPF, IS-IS y EIGRP lo sustituyen en redes grandes; RIP se mantiene en redes pequeñas y en la enseñanza del enrutamiento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subseccion video-apoyo">
+                    <h3>Video de apoyo</h3>
+                    <!-- Cambia VIDEO_ID por el código del video de YouTube
+                         (lo que va después de v= en el enlace). -->
+                    <a id="video-rip" class="video-link" data-video="PLKdXgCgYyo"
+                       href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="" alt="Portada del video de apoyo sobre el protocolo RIP">
+                        <span class="video-play">▶</span>
+                    </a>
+                    <p class="video-pie">Haz clic en la portada para abrir el video en YouTube.</p>
+                </div>
+
+                <div class="estadisticas">
+
+                    <div class="dato">
+                        <strong>120</strong>
+                        <span>Distancia administrativa</span>
+                    </div>
+
+                    <div class="dato">
+                        <strong>15</strong>
+                        <span>Saltos máximos utilizables</span>
+                    </div>
+
+                    <div class="dato">
+                        <strong>30 s</strong>
+                        <span>Intervalo de actualización</span>
+                    </div>
+
+                    <div class="dato">
+                        <strong>IGP</strong>
+                        <span>Tipo de protocolo</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VENTANA VERSIONES
+        ================================================== -->
+
+        <section id="versiones" class="ventana">
+
+            <div class="ventana-contenido">
+
+                <div class="encabezado-seccion">
+
+                    <span class="numero-seccion">02</span>
+
+                    <div>
+                        <span class="mini-titulo">
+                            COMPARACIÓN
+                        </span>
+
+                        <h2>
+                            RIPv1 y RIPv2
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="tabla-contenedor">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Característica</th>
+                                <th>RIPv1</th>
+                                <th>RIPv2</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Tipo</td>
+                                <td>Vector de distancia</td>
+                                <td>Vector de distancia</td>
+                            </tr>
+
+                            <tr>
+                                <td>Actualizaciones</td>
+                                <td>Broadcast</td>
+                                <td>Multicast</td>
+                            </tr>
+
+                            <tr>
+                                <td>VLSM / CIDR</td>
+                                <td>No</td>
+                                <td>Sí</td>
+                            </tr>
+
+                            <tr>
+                                <td>Autenticación</td>
+                                <td>No</td>
+                                <td>Sí</td>
+                            </tr>
+
+                            <tr>
+                                <td>Máscara de subred</td>
+                                <td>No incluida</td>
+                                <td>Incluida</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div class="nota">
+
+                    <span class="nota-icono">!</span>
+
+                    <div>
+
+                        <strong>
+                            Versión utilizada en la práctica
+                        </strong>
+
+                        <p>
+                            En la práctica realizada en Cisco Packet Tracer
+                            se utilizó <strong>RIPv2</strong>.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VENTANA FUNCIONAMIENTO
+        ================================================== -->
+
+        <section id="funcionamiento" class="ventana">
+
+            <div class="ventana-contenido">
+
+                <div class="encabezado-seccion">
+
+                    <span class="numero-seccion">03</span>
+
+                    <div>
+                        <span class="mini-titulo">
+                            PROCESO
+                        </span>
+
+                        <h2>
+                            Funcionamiento de RIP
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="pasos">
+
+                    <article class="paso">
+
+                        <div class="paso-numero">01</div>
+
+                        <h3>
+                            Intercambio de rutas
+                        </h3>
+
+                        <p>
+                            Los routers intercambian información sobre
+                            las redes que conocen mediante actualizaciones
+                            periódicas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="paso">
+
+                        <div class="paso-numero">02</div>
+
+                        <h3>
+                            Cálculo de saltos
+                        </h3>
+
+                        <p>
+                            RIP utiliza el número de saltos como métrica
+                            para determinar la distancia hacia una red.
+                        </p>
+
+                    </article>
+
+
+                    <article class="paso">
+
+                        <div class="paso-numero">03</div>
+
+                        <h3>
+                            Selección de ruta
+                        </h3>
+
+                        <p>
+                            El router selecciona la ruta disponible con
+                            la menor cantidad de saltos.
+                        </p>
+
+                    </article>
+
+
+                    <article class="paso">
+
+                        <div class="paso-numero">04</div>
+
+                        <h3>
+                            Actualización
+                        </h3>
+
+                        <p>
+                            Las tablas de enrutamiento se actualizan
+                            conforme los routers reciben nueva información.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <div class="temporizadores">
+
+                    <h3>
+                        Temporizadores de RIP
+                    </h3>
+
+                    <div class="temporizadores-grid">
+
+                        <div>
+                            <strong>30 s</strong>
+                            <span>Update Timer</span>
+                        </div>
+
+                        <div>
+                            <strong>180 s</strong>
+                            <span>Invalid Timer</span>
+                        </div>
+
+                        <div>
+                            <strong>180 s</strong>
+                            <span>Hold-down Timer</span>
+                        </div>
+
+                        <div>
+                            <strong>240 s</strong>
+                            <span>Flush Timer</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VENTANA TOPOLOGÍA
+        ================================================== -->
+
+        <section id="topologia" class="ventana">
+
+            <div class="ventana-contenido">
+
+                <div class="encabezado-seccion">
+
+                    <span class="numero-seccion">04</span>
+
+                    <div>
+                        <span class="mini-titulo">
+                            PRÁCTICA
+                        </span>
+
+                        <h2>
+                            Topología de red
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="topologia">
+
+                    <div class="topologia-titulo">
+                        TOPOLOGÍA IMPLEMENTADA EN PACKET TRACER
+                    </div>
+
+                    <div class="imagen-topologia">
+
+                        <img
+                            src="img/topologia.png"
+                            alt="Topología de la práctica RIPv2"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="grid-dos">
+
+                    <article class="tarjeta">
+
+                        <div class="router-titulo">
+                            ROUTER 1
+                        </div>
+
+                        <div class="direccionamiento">
+
+                            <div>
+                                <span>Fa0/0</span>
+                                <strong>192.168.10.1/24</strong>
+                            </div>
+
+                            <div>
+                                <span>Fa0/1</span>
+                                <strong>192.168.11.1/24</strong>
+                            </div>
+
+                            <div>
+                                <span>S0/2/0</span>
+                                <strong>209.165.200.225/30</strong>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="tarjeta">
+
+                        <div class="router-titulo">
+                            ROUTER 2
+                        </div>
+
+                        <div class="direccionamiento">
+
+                            <div>
+                                <span>Fa0/0</span>
+                                <strong>10.1.1.1/24</strong>
+                            </div>
+
+                            <div>
+                                <span>Fa0/1</span>
+                                <strong>10.1.2.1/24</strong>
+                            </div>
+
+                            <div>
+                                <span>S0/2/0</span>
+                                <strong>209.165.200.226/30</strong>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="redes">
+
+                    <div class="red">
+                        <span>RED 10</span>
+                        <strong>192.168.10.0/24</strong>
+                    </div>
+
+                    <div class="red">
+                        <span>RED 11</span>
+                        <strong>192.168.11.0/24</strong>
+                    </div>
+
+                    <div class="red">
+                        <span>ENLACE SERIAL</span>
+                        <strong>209.165.200.224/30</strong>
+                    </div>
+
+                    <div class="red">
+                        <span>RED 12</span>
+                        <strong>10.1.1.0/24</strong>
+                    </div>
+
+                    <div class="red">
+                        <span>RED 13</span>
+                        <strong>10.1.2.0/24</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VENTANA CONFIGURACIÓN
+        ================================================== -->
+
+        <section id="configuracion" class="ventana">
+
+            <div class="ventana-contenido">
+
+                <div class="encabezado-seccion">
+
+                    <span class="numero-seccion">05</span>
+
+                    <div>
+                        <span class="mini-titulo">
+                            CISCO IOS
+                        </span>
+
+                        <h2>
+                            Configuración RIPv2
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="config-grid">
+
+                    <article class="codigo-card">
+
+                        <div class="codigo-header">
+                            <span>ROUTER 1</span>
+                            <span>RIPv2</span>
+                        </div>
+
+                        <pre><code>router rip
+ version 2
+ network 192.168.10.0
+ network 192.168.11.0
+ network 209.165.200.0
+ no auto-summary</code></pre>
+
+                    </article>
+
+
+                    <article class="codigo-card">
+
+                        <div class="codigo-header">
+                            <span>ROUTER 2</span>
+                            <span>RIPv2</span>
+                        </div>
+
+                        <pre><code>router rip
+ version 2
+ network 10.0.0.0
+ network 209.165.200.0
+ no auto-summary</code></pre>
+
+                    </article>
+
+                </div>
+
+
+                <div class="subseccion">
+
+                    <h3>
+                        DHCP
+                    </h3>
+
+                    <div class="grid-dos">
+
+                        <article class="tarjeta">
+
+                            <h4>
+                                Router 1
+                            </h4>
+
+                            <p>
+                                Se configuraron los pools DHCP
+                                <strong>RED10</strong> y
+                                <strong>RED11</strong>.
+                            </p>
+
+                            <p>
+                                Se excluyeron las direcciones
+                                <strong>192.168.10.1–10</strong> y
+                                <strong>192.168.11.1–10</strong>.
+                            </p>
+
+                        </article>
+
+
+                        <article class="tarjeta">
+
+                            <h4>
+                                Router 2
+                            </h4>
+
+                            <p>
+                                Se configuraron los pools DHCP
+                                <strong>RED12</strong> y
+                                <strong>RED13</strong>.
+                            </p>
+
+                            <p>
+                                Se excluyeron las direcciones
+                                <strong>10.1.1.1–10</strong> y
+                                <strong>10.1.2.1–10</strong>.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                
+                    <h4 class="sub-h4">¿Cómo se configura un pool de DHCP?</h4>
+                    <div class="pasos pasos-4">
+                        <article class="paso"><div class="paso-numero">01</div><h3>Excluir direcciones</h3>
+                            <p>Con <code>ip dhcp excluded-address</code> se reservan las primeras IP (la del router y equipos fijos) para que no se entreguen a los clientes.</p></article>
+                        <article class="paso"><div class="paso-numero">02</div><h3>Crear el pool</h3>
+                            <p>Con <code>ip dhcp pool NOMBRE</code> se crea el conjunto de direcciones y se entra a su modo de configuración.</p></article>
+                        <article class="paso"><div class="paso-numero">03</div><h3>Definir la red</h3>
+                            <p>Con <code>network</code> se indica la red y su máscara; de ahí salen las direcciones a entregar.</p></article>
+                        <article class="paso"><div class="paso-numero">04</div><h3>Gateway y DNS</h3>
+                            <p><code>default-router</code> es la puerta de enlace de los clientes y <code>dns-server</code> el servidor DNS.</p></article>
+                    </div>
+                    <div class="config-grid">
+                        <article class="codigo-card"><div class="codigo-header"><span>ROUTER 1</span><span>DHCP</span></div>
+                        <pre><code>ip dhcp excluded-address 192.168.10.1 192.168.10.10
+ip dhcp excluded-address 192.168.11.1 192.168.11.10
+!
+ip dhcp pool RED10
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 8.8.8.8
+!
+ip dhcp pool RED11
+ network 192.168.11.0 255.255.255.0
+ default-router 192.168.11.1
+ dns-server 8.8.8.8</code></pre></article>
+                        <article class="codigo-card"><div class="codigo-header"><span>ROUTER 2</span><span>DHCP</span></div>
+                        <pre><code>ip dhcp excluded-address 10.1.1.1 10.1.1.10
+ip dhcp excluded-address 10.1.2.1 10.1.2.10
+!
+ip dhcp pool RED12
+ network 10.1.1.0 255.255.255.0
+ default-router 10.1.1.1
+ dns-server 8.8.8.8
+!
+ip dhcp pool RED13
+ network 10.1.2.0 255.255.255.0
+ default-router 10.1.2.1
+ dns-server 8.8.8.8</code></pre></article>
+                    </div>
+                    <p class="sub-nota">Para comprobarlo: <code>show ip dhcp pool</code> y <code>show ip dhcp binding</code>. En las PC, configura la interfaz en <strong>DHCP</strong>.</p>
+                </div>
+
+
+                <div class="verificacion">
+
+                    <h3>
+                        Verificación del enrutamiento
+                    </h3>
+
+                    <p>
+                        Con <code>show ip route</code> cada router muestra
+                        únicamente las redes remotas que aprendió por RIP
+                        (marcadas con <strong>R</strong>); sus redes propias
+                        aparecen como conectadas (<strong>C</strong>).
+                    </p>
+                    <h4 class="sub-h4">Router 1 aprende las redes de Router 2</h4>
+                    <div class="rutas">
+                        <div class="ruta">
+                            <code>R 10.1.1.0/24</code>
+                            <span>[120/1] vía 209.165.200.226, Serial0/2/0</span>
+                        </div>
+                        <div class="ruta">
+                            <code>R 10.1.2.0/24</code>
+                            <span>[120/1] vía 209.165.200.226, Serial0/2/0</span>
+                        </div>
+                    </div>
+                    <h4 class="sub-h4">Router 2 aprende las redes de Router 1</h4>
+                    <div class="rutas">
+                        <div class="ruta">
+                            <code>R 192.168.10.0/24</code>
+                            <span>[120/1] vía 209.165.200.225, Serial0/2/0</span>
+                        </div>
+                        <div class="ruta">
+                            <code>R 192.168.11.0/24</code>
+                            <span>[120/1] vía 209.165.200.225, Serial0/2/0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VENTANA BUCLES
+        ================================================== -->
+
+        <section id="bucles" class="ventana">
+
+            <div class="ventana-contenido">
+
+                <div class="encabezado-seccion">
+
+                    <span class="numero-seccion">06</span>
+
+                    <div>
+                        <span class="mini-titulo">
+                            SEGURIDAD DEL ENRUTAMIENTO
+                        </span>
+
+                        <h2>
+                            Prevención de bucles
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="bucles-grid">
+
+                    <article class="tarjeta">
+
+                        <div class="numero-circular">
+                            01
+                        </div>
+
+                        <h3>
+                            Split Horizon
+                        </h3>
+
+                        <p>
+                            Evita anunciar una ruta de regreso por la misma
+                            interfaz desde la cual fue aprendida.
+                        </p>
+
+                    </article>
+
+
+                    <article class="tarjeta">
+
+                        <div class="numero-circular">
+                            02
+                        </div>
+
+                        <h3>
+                            Route Poisoning
+                        </h3>
+
+                        <p>
+                            Una ruta que deja de estar disponible puede
+                            anunciarse con una métrica de 16, indicando
+                            que es inalcanzable.
+                        </p>
+
+                    </article>
+
+
+                    <article class="tarjeta">
+
+                        <div class="numero-circular">
+                            03
+                        </div>
+
+                        <h3>
+                            Poisoned Reverse
+                        </h3>
+
+                        <p>
+                            Consiste en anunciar explícitamente una ruta
+                            como inalcanzable hacia el vecino que la
+                            proporcionó.
+                        </p>
+
+                    </article>
+
+
+                    <article class="tarjeta">
+
+                        <div class="numero-circular">
+                            04
+                        </div>
+
+                        <h3>
+                            Triggered Updates
+                        </h3>
+
+                        <p>
+                            Permiten enviar una actualización inmediatamente
+                            cuando ocurre un cambio en la información de
+                            enrutamiento.
+                        </p>
+
+                    </article>
+
+
+                    <article class="tarjeta">
+
+                        <div class="numero-circular">
+                            05
+                        </div>
+
+                        <h3>
+                            Hold-down
+                        </h3>
+
+                        <p>
+                            Ayuda a evitar que información inestable sobre
+                            una ruta sea aceptada inmediatamente durante
+                            un periodo determinado.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VENTANA ANÁLISIS
+        ================================================== -->
+
+        <section id="analisis" class="ventana">
+
+            <div class="ventana-contenido">
+
+                <div class="encabezado-seccion">
+
+                    <span class="numero-seccion">07</span>
+
+                    <div>
+                        <span class="mini-titulo">
+                            ANÁLISIS
+                        </span>
+
+                        <h2>
+                            Ventajas y desventajas
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="ventajas-grid">
+
+                    <article class="ventajas">
+
+                        <h3>
+                            Ventajas
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Configuración sencilla.
+                            </li>
+
+                            <li>
+                                Fácil de comprender y administrar.
+                            </li>
+
+                            <li>
+                                Permite el aprendizaje dinámico de rutas.
+                            </li>
+
+                            <li>
+                                Es apropiado para redes pequeñas.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="desventajas">
+
+                        <h3>
+                            Desventajas
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                El número de saltos limita su escalabilidad.
+                            </li>
+
+                            <li>
+                                Las actualizaciones periódicas generan tráfico.
+                            </li>
+
+                            <li>
+                                La convergencia puede ser más lenta que
+                                en otros protocolos.
+                            </li>
+
+                            <li>
+                                No es adecuado para redes grandes y complejas.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+                </div>
+
+
+                <div class="conclusion-mini">
+
+                    <span class="mini-titulo">
+                        CONCLUSIÓN
+                    </span>
+
+                    <h3>
+                        RIP en la práctica
+                    </h3>
+
+                    <p>
+                        La práctica permitió comprender el funcionamiento
+                        del protocolo RIP y observar cómo los routers
+                        intercambian información para aprender dinámicamente
+                        las redes remotas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VENTANA PRÁCTICA
+        ================================================== -->
+
+        <section id="practica" class="ventana">
+
+            <div class="ventana-contenido">
+
+                <div class="encabezado-seccion">
+                    <span class="numero-seccion">08</span>
+                    <div>
+                        <span class="mini-titulo">HAZLO TÚ</span>
+                        <h2>Práctica guiada</h2>
+                    </div>
+                </div>
+
+                <p class="sub-nota">
+                    Reproduce el proyecto en Cisco Packet Tracer siguiendo
+                    estos pasos y compara tus resultados con los de la página.
+                </p>
+
+                <div class="pasos pasos-3">
+                    <article class="paso"><div class="paso-numero">01</div><h3>Arma la topología</h3>
+                        <p>En Packet Tracer coloca 2 routers, 2 switches y al menos 1 PC por red. Une los routers con cable serial.</p></article>
+                    <article class="paso"><div class="paso-numero">02</div><h3>Asigna las IP</h3>
+                        <p>Configura cada interfaz con la tabla de la sección Topología y actívala con <code>no shutdown</code>. En el lado DCE del serial agrega <code>clock rate 64000</code>.</p></article>
+                    <article class="paso"><div class="paso-numero">03</div><h3>Configura RIPv2</h3>
+                        <p>Escribe en cada router los comandos <code>router rip</code>, <code>version 2</code>, <code>network</code> y <code>no auto-summary</code>.</p></article>
+                    <article class="paso"><div class="paso-numero">04</div><h3>Crea los pools DHCP</h3>
+                        <p>Configura RED10 y RED11 en el Router 1, y RED12 y RED13 en el Router 2, como en la sección Configuración.</p></article>
+                    <article class="paso"><div class="paso-numero">05</div><h3>Verifica las rutas</h3>
+                        <p>Ejecuta <code>show ip route</code> en ambos routers: cada uno debe mostrar con <strong>R</strong> las redes del otro.</p></article>
+                    <article class="paso"><div class="paso-numero">06</div><h3>Prueba la conectividad</h3>
+                        <p>Desde una PC del Router 1 haz <code>ping</code> a una PC del Router 2. Las respuestas confirman que RIP funciona.</p></article>
+                </div>
+
+                <div class="nota">
+                    <span class="nota-icono">!</span>
+                    <div>
+                        <strong>Reto final</strong>
+                        <p>
+                            Apaga la interfaz Fa0/0 del Router 2 con
+                            <code>shutdown</code> y, pasados unos minutos, revisa
+                            <code>show ip route</code> en el Router 1:
+                            ¿qué pasó con la red 10.1.1.0/24? Relaciónalo con
+                            la sección de prevención de bucles y vuelve a activarla
+                            con <code>no shutdown</code>.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VENTANA EVALUACIÓN
+        ================================================== -->
+
+        <section id="evaluacion" class="ventana">
+
+            <div class="ventana-contenido ventana-centrada">
+
+                <div class="formulario-card">
+
+                    <div class="formulario-icono">
+                        ✓
+                    </div>
+
+                    <span class="mini-titulo">
+                        EVALUACIÓN
+                    </span>
+
+                    <h2>
+                        Comprueba tus conocimientos
+                    </h2>
+
+                    <p>
+                        Ingresa al formulario para responder la evaluación
+                        relacionada con el protocolo RIP y la práctica
+                        realizada en Cisco Packet Tracer.
+                    </p>
+
+
+                    <!--
+                    ==================================================
+                    PEGA AQUÍ EL ENLACE DE TU GOOGLE FORMS
+                    ==================================================
+                    -->
+
+                    <a
+                        href="https://forms.gle/HRa1wcNZze9oHweR7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="boton boton-principal boton-formulario">
+                        ABRIR FORMULARIO
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         PIE DE PÁGINA
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <span>
+            ◈ RIP
+        </span>
+
+        <p>
+            Proyecto de Investigación · Routing Information Protocol
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
